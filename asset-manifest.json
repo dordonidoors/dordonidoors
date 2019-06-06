@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dordonidoors/static/css/main.a0a3a478.chunk.css",
-    "main.js": "/dordonidoors/static/js/main.ef85bb0a.chunk.js",
-    "main.js.map": "/dordonidoors/static/js/main.ef85bb0a.chunk.js.map",
-    "runtime~main.js": "/dordonidoors/static/js/runtime~main.99619f80.js",
-    "runtime~main.js.map": "/dordonidoors/static/js/runtime~main.99619f80.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/dordonidoors/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.ef752a71.chunk.js": "/dordonidoors/static/js/2.ef752a71.chunk.js",
-    "static/js/2.ef752a71.chunk.js.map": "/dordonidoors/static/js/2.ef752a71.chunk.js.map",
-    "index.html": "/dordonidoors/index.html",
-    "precache-manifest.3f1c7383a639454be1ffba74dd27c31c.js": "/dordonidoors/precache-manifest.3f1c7383a639454be1ffba74dd27c31c.js",
-    "service-worker.js": "/dordonidoors/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/dordonidoors/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.a0a3a478.chunk.css.map": "/dordonidoors/static/css/main.a0a3a478.chunk.css.map",
-    "static/media/logo.svg": "/dordonidoors/static/media/logo.5d5d9eef.svg"
+    "main.css": "/doors/static/css/main.a0a3a478.chunk.css",
+    "main.js": "/doors/static/js/main.e44e3a7a.chunk.js",
+    "main.js.map": "/doors/static/js/main.e44e3a7a.chunk.js.map",
+    "runtime~main.js": "/doors/static/js/runtime~main.cc2e14f7.js",
+    "runtime~main.js.map": "/doors/static/js/runtime~main.cc2e14f7.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/doors/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.ef752a71.chunk.js": "/doors/static/js/2.ef752a71.chunk.js",
+    "static/js/2.ef752a71.chunk.js.map": "/doors/static/js/2.ef752a71.chunk.js.map",
+    "index.html": "/doors/index.html",
+    "precache-manifest.8cc0ea020804e7ffb71c47ce29dae13d.js": "/doors/precache-manifest.8cc0ea020804e7ffb71c47ce29dae13d.js",
+    "service-worker.js": "/doors/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/doors/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.a0a3a478.chunk.css.map": "/doors/static/css/main.a0a3a478.chunk.css.map",
+    "static/media/logo.svg": "/doors/static/media/logo.5d5d9eef.svg"
   }
 }
