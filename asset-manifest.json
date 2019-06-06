@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/dordonidoors/static/css/main.a0a3a478.chunk.css",
+    "main.js": "/dordonidoors/static/js/main.71eeee3c.chunk.js",
+    "main.js.map": "/dordonidoors/static/js/main.71eeee3c.chunk.js.map",
+    "runtime~main.js": "/dordonidoors/static/js/runtime~main.99619f80.js",
+    "runtime~main.js.map": "/dordonidoors/static/js/runtime~main.99619f80.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/dordonidoors/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.5a32e14d.chunk.js": "/dordonidoors/static/js/2.5a32e14d.chunk.js",
+    "static/js/2.5a32e14d.chunk.js.map": "/dordonidoors/static/js/2.5a32e14d.chunk.js.map",
+    "index.html": "/dordonidoors/index.html",
+    "precache-manifest.8fe1915cbbaa8a875c83150f42c23287.js": "/dordonidoors/precache-manifest.8fe1915cbbaa8a875c83150f42c23287.js",
+    "service-worker.js": "/dordonidoors/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/dordonidoors/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.a0a3a478.chunk.css.map": "/dordonidoors/static/css/main.a0a3a478.chunk.css.map",
+    "static/media/logo.svg": "/dordonidoors/static/media/logo.5d5d9eef.svg"
+  }
+}
