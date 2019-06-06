@@ -1,0 +1,21 @@
+nav {
+  font-size: 15px !important;
+}
+
+@media all and (max-width: 990px) {
+  .navbar-header {
+    display: none;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .content h1 {
+    font-size: 50px;
+  }
+  .content div.about-text {
+    font-size: 20px;
+  }
+  .content h3 {
+    font-size: 30px;
+  }
+}
