@@ -1,4 +1,5 @@
 {
+  "homepage": "http://dordonidoors.github.io/doors",
   "name": "dordonidoors",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "react-toastify": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,7 +34,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://dordonidoors.github.io/dordonidoors",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }

@@ -26,21 +26,20 @@ class App extends React.Component {
 		super(props);
 	}
 	render () {
+		console.log(`${process.env.PUBLIC_URL}`);
 		return(
 			<div className="App">
-				<Router>
-					<NavbarWithRouter />
+				<NavbarWithRouter />
 
-					<Route path='/home' component={Home} />
-					<Route path='/contact' component={ContactUs} />
-					<Route path='/services' component={Services} />
-					<Route path='/gallery' component={Gallery} />
-					<Route exact path='/' render={() => (
-						<Redirect to='/home' />
-					)}/>
+				<Route exact path='/home' component={Home} />
+				<Route exact path='/contact' component={ContactUs} />
+				<Route exact path='/services' component={Services} />
+				<Route exact path='/gallery' component={Gallery} />
+				<Route exact path={`/`} render={() => (
+					<Redirect to='/home' />
+				)}/>
 
-					<Footer />
-				</Router>
+				<Footer />
 			</div>
 		);
 	}

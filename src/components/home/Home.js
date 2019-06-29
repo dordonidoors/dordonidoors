@@ -40,7 +40,7 @@ const Home = () => {
 							We work with architects and general contractors to produce beautiful, functional structures.
 							Contact us today so we can bring our project management skills and extensive construction experience
 							to your next project.
-						</div> 
+						</div>
 					</div>
 
 					<br style={{clear: 'both'}}/>
@@ -49,9 +49,12 @@ const Home = () => {
 
 			<div className='fixed-image bg bg-image4 content' style={{height: '100%'}}>
 
-				<div style={{paddingLeft: '20%', paddingRight: '20%'}}>
-					<h1>Our Mission</h1>
+				<div className='container'>
+					<h2>Our Mission</h2>
 					<p>
+						Dordoni Doors aims to provide the highest level of quality door construction and installation to
+						our customers, to ensure quality work with competitive prices and to gaurantee professionalism, honesty, integrity,
+						and fairness to all our customers.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 						nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -61,8 +64,8 @@ const Home = () => {
 					</p>
 				</div>
 
-				<div style={{marginTop: '10%', paddingLeft: '20%', paddingRight: '20%'}}>
-					<h1>We'd love to hear from you</h1>
+				<div className='container' style={{marginTop: '10%'}}>
+					<h2>We'd love to hear from you</h2>
 					<em>If you have questions about any of our services, quotes, and  more, our team is ready to answer any and all your questions!</em>
 				</div>
 

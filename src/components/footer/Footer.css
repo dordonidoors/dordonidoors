@@ -10,6 +10,8 @@
 	text-shadow: 1px 1px 5px black;
 }
 
+@media only screen and (max)
+
 .copyright {
 	display: table-cell;
 	text-align: left;
