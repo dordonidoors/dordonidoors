@@ -5,7 +5,9 @@ import './Home.scss';
 
 const Home = () => {
 	return (
-		<section id='home' className='section is-large bg bg-image1'>
+		<section id='home' className='section is-large bg bg-image1' style={{
+				backgroundImage: `url('${process.env.REACT_APP_IMAGES_PREFIX}/office2.jpg')`
+			}}>
 			<div className='container'>
 				<h1 className='title is-1'>Dordoni Doors & Hardward Installation</h1>
 				<h2 className='subtitle is-4'>Building trust with quality work</h2>
