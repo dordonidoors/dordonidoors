@@ -1,0 +1,10 @@
+@import '../../sass/colors.scss';
+
+#topbar, #topbar div.level-left p.content {
+  margin-bottom: 0px !important;
+}
+
+.level {
+  padding: 10px;
+  background-color: $cyan;
+}
