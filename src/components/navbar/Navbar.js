@@ -23,7 +23,7 @@ class Navbar extends React.Component {
 				<div className='container'>
 					<div className='navbar-brand'>
 						<a className='navbar-item'>
-							<img src={`/images/dordonidoorstransparent.png`} style={{maxHeight: '60px'}}/>
+							<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/dordonidoorstransparent.png`} style={{maxHeight: '60px'}}/>
 						</a>
 
 						<a role='button' className='navbar-burger burger' aria-label='Main Menu' aria-expanded='false' data-target='navbarBasicExample'>
