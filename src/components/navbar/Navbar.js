@@ -11,29 +11,29 @@ class Navbar extends React.Component {
 			isCollapsed: true
 		};
 	}
-	handleLinkClick(linkName) {
-		this.setState({currentRoute: linkName});
-	}
-	handleNavbarToggle() {
-		this.setState({isCollapsed: !this.state.isCollapsed});
-	}
 	render () {
 		return(
-			<div className='navbar' role='navigation' aria-label='main navigation'>
+			<nav id='navbar' className='navbar has-shadow'>
 				<div className='container'>
 					<div className='navbar-brand'>
-						<a className='navbar-item'>
+						<a className='navbar-item is-hidden-touch'>
 							<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/dordonidoorstransparent.png`} style={{maxHeight: '60px'}}/>
 						</a>
 
-						<a role='button' className='navbar-burger burger' aria-label='Main Menu' aria-expanded='false' data-target='navbarBasicExample'>
-							<span aria-hidden='true'></span>
-							<span aria-hidden='true'></span>
-							<span aria-hidden='true'></span>
+						<a
+							role='button'
+							className={`navbar-burger burger ${!this.state.isCollapsed ? 'is-active' : ''}`}
+							aria-label='menu'
+							aria-expanded='true'
+							data-target='navMenu'
+							onClick={() => this.setState({isCollapsed: !this.state.isCollapsed})}>
+							<span></span>
+							<span></span>
+							<span></span>
 						</a>
 					</div>
 
-					<div className='navbar-menu' id='navbarBasicExample'>
+					<div className={`navbar-menu ${!this.state.isCollapsed ? 'is-active' : ''}`} id='navMenu'>
 						<div className='navbar-end'>
 							<a className='navbar-item'>
 								Home
@@ -53,9 +53,14 @@ class Navbar extends React.Component {
 						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		);
 	}
 }
 
 export default Navbar
+
+/*
+
+
+*/
