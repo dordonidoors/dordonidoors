@@ -10,7 +10,8 @@ import Home from './components/home/Home';
 import AboutUs from './components/aboutus/AboutUs';
 import Services from './components/services/Services';
 import Footer from './components/footer/Footer';
-// import ContactUs from './components/contactus/ContactUs';
+import ContactUs from './components/contactus/ContactUs';
+import Gallery from './components/gallery/Gallery';
 // import Services from './components/services/Services';
 // import Gallery from './components/gallery/Gallery';
 
@@ -28,6 +29,8 @@ class App extends React.Component {
 				<Home />
 				<AboutUs />
 				<Services />
+				<Gallery />
+				<ContactUs />
 
 				<Footer />
 			</div>

@@ -5,10 +5,20 @@ import './AboutUs.scss';
 const AboutUs = () => {
 	return (
 		<section id='about-us' className='section is-medium has-text-left'>
-			<div className='container'>
+			<div id='about-container' className='container'>
 				<div className='columns'>
-					<div className='column is-half'>
+					<div className='column is-one-third box'>
+						<figure className='image is-16by1'>
+							<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/doorspresident.jpg`} />
+						</figure>
+						<p>Dordoni Doors President</p>
+					</div>
+					<div className='column'>
 						<h1 className='title is-2'>About Us</h1>
+						<h1 className='title is-4'>We'll get the job done</h1>
+
+						<hr />
+
 						<p className='content is-medium'>
               Dordoni Doors is a full service door installation company with over
 							30 years of experience in the field equipped with the necessary tools and knowledge

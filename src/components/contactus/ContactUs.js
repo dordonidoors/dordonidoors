@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import validateContactUsForm from '../../validation';
 
 import 'react-toastify/dist/ReactToastify.css';
+import './ContactUs.scss';
 
 class ContactUs extends React.Component {
 	constructor(props) {
@@ -41,37 +42,57 @@ class ContactUs extends React.Component {
 	}
 	render () {
 		return (
-			<div>
+			<section id='contact-us' className='section is-medium' style={{textAlign: 'left'}}>
 				<ToastContainer style={{color: 'white', textShadow: '!important'}} position={toast.POSITION.BOTTOM_RIGHT}/>
-				<div className='static-section content' style={{height: '100vh'}}>
-					<h1>Contact Us!</h1>
+				<div className='container'>
+					<div className='columns'>
+						<div className='column is-half'>
+							<h1 className='title is-2'>Request a Quote</h1>
 
+							<h3 className='subtitle is-5'>Please take a moment to fill in the form to receive custom pricing.</h3>
 
-					<h5>Have a question about our services? We'd love to here from you. Send us a message and we'll respond as soon as we can!</h5>
-
-					<div style={{
-						margin: '0 auto',
-						padding: '20px'
-					}} className='container'>
-						<form onSubmit={this.handleSubmit}>
-							<div className='form-group' style={{textAlign: 'left'}}>
-								<label>Name</label>
-								<input name='name' className='form-control'/>
-							</div>
-							<div className='form-group' style={{textAlign: 'left'}}>
-								<label>Email</label>
-								<input name='email' type='email' className='form-control' />
-							</div>
-							<div className='form-group'style={{textAlign: 'left'}}>
-								<label>Message</label>
-								<textarea name='message' className='form-control' rows='10'>
-								</textarea>
-							</div>
-							<button type='submit' className='btn btn-primary'>Submit</button>
-						</form>
+							<p className='content is-medium'>
+								You may also contact us by:
+									<ul>
+										<span><i className='fas fa-phone'></i><strong>&nbsp;(714) 777-7777</strong></span>
+									</ul>
+									<ul>
+										<span><i className='fas fa-envelope'></i><strong>&nbsp;dordonidoors@gmail.com</strong></span>
+									</ul>
+							</p>
+						</div>
+						<div className='column is-half'>
+							<form onSubmit={this.handleSubmit.bind(this)}>
+								<div className='field'>
+									<label className='label'>Name</label>
+									<div className='control'>
+										<input name='name' className='input' type='text' placeholder='Please enter your name...' />
+									</div>
+								</div>
+								<div className='field'>
+									<label className='label'>Email</label>
+									<div className='control'>
+										<input name='email' className='input' type='email' placeholder='Please enter your email...' />
+									</div>
+								</div>
+								<div className='field'>
+									<label className='label'>Message</label>
+									<div className='control'>
+										<textarea name='message' className='textarea' placeholder='Please enter your message...'></textarea>
+									</div>
+								</div>
+								<div className='field'>
+									<p className='control'>
+										<button type='submit' className='button is-success'>
+											Send
+										</button>
+									</p>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		);
 	}
 }

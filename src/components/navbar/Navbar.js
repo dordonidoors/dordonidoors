@@ -40,11 +40,15 @@ class Navbar extends React.Component {
 							</a>
 
 							<a className='navbar-item'>
-								Contact
+								About Us
 							</a>
 
 							<a className='navbar-item'>
 								Services
+							</a>
+
+							<a className='navbar-item'>
+								Contact
 							</a>
 
 							<a className='navbar-item'>

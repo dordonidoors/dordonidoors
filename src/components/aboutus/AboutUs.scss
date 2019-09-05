@@ -1,3 +1,12 @@
 #about-us {
   background-color: hsla(204, 86%, 53%, 0.2);
 }
+
+$table-breakpoint: 1023px;
+
+#about-container {
+  @media screen and (min-width: $table-breakpoint){
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
