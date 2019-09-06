@@ -10,7 +10,7 @@ const Home = (props) => {
 				backgroundImage: `url('${process.env.REACT_APP_IMAGES_PREFIX}/office2.jpg')`
 			}}>
 			<div className='container'>
-				<h1 className='title is-1'>Dordoni Doors & Hardward Installation</h1>
+				<h1 className='title is-1'>Dordoni Doors & Hardware Installation</h1>
 				<h2 className='subtitle is-4'>Building trust with quality work</h2>
 
 				<hr style={{

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { ToastContainer, toast } from 'react-toastify';
+import Recaptcha from 'react-recaptcha';
 
 // validation
 import validateContactUsForm from '../../validation';
@@ -12,6 +13,7 @@ class ContactUs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleSubmit.bind(this);
+		this.recaptchInstance = null;
 	}
 	componentDidMount() {
 		window.scrollTo(0,0);
@@ -40,6 +42,9 @@ class ContactUs extends React.Component {
 		}
 
 	}
+	recaptchaOnVerifyCallback(response) {
+		console.log(response)
+	}
 	render () {
 		return (
 			<section id='contact-us' ref={this.props.refProp} className='section is-medium' style={{textAlign: 'left'}}>
@@ -59,10 +64,10 @@ class ContactUs extends React.Component {
 							</p>
 							<ul>
 								<li>
-									<span><i className='fas fa-phone'></i><strong>&nbsp;(714) 777-7777</strong></span>
+									<span><a className='button is-white' href={`tel:${process.env.REACT_APP_PHONE}`}><i className='fas fa-phone'></i><strong>&nbsp;{process.env.REACT_APP_PHONE}</strong></a></span>
 								</li>
 								<li>
-									<span><i className='fas fa-envelope'></i><strong>&nbsp;dordonidoors@gmail.com</strong></span>
+									<span><a className='button is-white' href='mailto:dordonidoors@gmail.com'><i className='fas fa-envelope'></i><strong>&nbsp;dordonidoors@gmail.com</strong></a></span>
 								</li>
 							</ul>
 						</div>
@@ -86,6 +91,13 @@ class ContactUs extends React.Component {
 										<textarea name='message' className='textarea' placeholder='Please enter your message...'></textarea>
 									</div>
 								</div>
+
+								<div className='field'>
+									<Recaptcha
+										verifyCallback={this.recaptchaOnVerifyCallback}
+										sitekey='6LecI7cUAAAAAETsMy5AWV-gQi8PLuACLmIvCYsq'/>
+								</div>
+
 								<div className='field'>
 									<p className='control'>
 										<button type='submit' className='button is-success'>
