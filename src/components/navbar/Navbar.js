@@ -1,19 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // css
 import './Navbar.scss';
 
-class Navbar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isCollapsed: true
-		};
-	}
-	render () {
-		return(
-			<nav id='navbar' className='navbar has-shadow'>
+// components
+import {scrollToRef} from '../scrollToRef/scrollToRef';
+
+const Navbar = (props) => {
+	const [navbarState, setNavbarState] = useState({isCollapsed: true});
+	return(
+		<nav id='navbar' className='navbar has-shadow'>
 				<div className='container'>
 					<div className='navbar-brand'>
 						<a className='navbar-item is-hidden-touch'>
@@ -22,47 +19,46 @@ class Navbar extends React.Component {
 
 						<a
 							role='button'
-							className={`navbar-burger burger ${!this.state.isCollapsed ? 'is-active' : ''}`}
+							className={`navbar-burger burger ${!navbarState.isCollapsed ? 'is-active' : ''}`}
 							aria-label='menu'
 							aria-expanded='true'
 							data-target='navMenu'
-							onClick={() => this.setState({isCollapsed: !this.state.isCollapsed})}>
+							onClick={() => setNavbarState({isCollapsed: !navbarState.isCollapsed})}>
 							<span></span>
 							<span></span>
 							<span></span>
 						</a>
 					</div>
 
-					<div className={`navbar-menu ${!this.state.isCollapsed ? 'is-active' : ''}`} id='navMenu'>
+					<div className={`navbar-menu ${!navbarState.isCollapsed ? 'is-active' : ''}`} id='navMenu'>
 						<div className='navbar-end'>
-							<a className='navbar-item'>
+							<a className='navbar-item' onClick={() => window.scrollTo(0, 0)}>
 								Home
 							</a>
 
-							<a className='navbar-item'>
+							<a className='navbar-item' onClick={() => scrollToRef(props.aboutRef)}>
 								About Us
 							</a>
 
-							<a className='navbar-item'>
+							<a className='navbar-item' onClick={() => scrollToRef(props.servicesRef)}>
 								Services
 							</a>
 
-							<a className='navbar-item'>
-								Contact
+							<a className='navbar-item' onClick={() => scrollToRef(props.galleryRef)}>
+								Gallery
 							</a>
 
-							<a className='navbar-item'>
-								Gallery
+							<a className='navbar-item' onClick={() => scrollToRef(props.contactRef)}>
+								Contact
 							</a>
 						</div>
 					</div>
 				</div>
 			</nav>
-		);
-	}
-}
+	);
+};
 
-export default Navbar
+export default Navbar;
 
 /*
 

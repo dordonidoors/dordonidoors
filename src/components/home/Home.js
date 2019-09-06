@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Home.scss';
+import {scrollToRef} from '../scrollToRef/scrollToRef';
 
-const Home = () => {
+const Home = (props) => {
 	return (
-		<section id='home' className='section is-large bg bg-image1' style={{
+		<section id='home' ref={props.refProp} className='section is-large bg bg-image1' style={{
 				backgroundImage: `url('${process.env.REACT_APP_IMAGES_PREFIX}/office2.jpg')`
 			}}>
 			<div className='container'>
@@ -21,7 +22,7 @@ const Home = () => {
 
 				<h4 className='subtitle is-6'>Over 30 years experience</h4>
 
-				<a className='button is-info'>Request Quote</a>
+				<a className='button is-info' onClick={() => scrollToRef(props.refPropContact)}>Request Quote</a>
 			</div>
 		</section>
 	);

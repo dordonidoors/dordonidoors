@@ -2,9 +2,9 @@ import React from 'react';
 
 import './AboutUs.scss';
 
-const AboutUs = () => {
+const AboutUs = (props) => {
 	return (
-		<section id='about-us' className='section is-medium has-text-left'>
+		<section id='about-us' ref={props.refProp} className='section is-medium has-text-left'>
 			<div id='about-container' className='container'>
 				<div className='columns'>
 					<div className='column is-one-third box'>
