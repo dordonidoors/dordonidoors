@@ -1,19 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// styles
 import './AboutUs.scss';
 
-const AboutUs = () => {
+const AboutUs = (props) => {
 	return (
-		<section id='about-us' className='section is-medium has-text-left'>
-			<div className='container'>
+		<section id='about-us' ref={props.refProp} className='section is-medium has-text-left'>
+			<div id='about-container' className='container'>
 				<div className='columns'>
-					<div className='column is-half'>
-						<h1 className='title is-2'>About Us</h1>
-						<p className='content is-medium'>
-              Dordoni Doors is a full service door installation company with over
-							30 years of experience in the field equipped with the necessary tools and knowledge
-							that aims to provide the highest level of quality to all our clients.
-						</p>
+					<div className='column is-one-third'>
+						<div className='box'>
+							<figure className='image' style={{width: '200px'}}>
+								<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/doorspresident.jpg`} />
+							</figure>
+							<p>Dordoni Doors President</p>
+						</div>
+					</div>
+					<div className='column'>
+						<div>
+							<h1 className='title is-2'>About Us</h1>
+							<h1 className='title is-4'>We'll get the job done</h1>
+
+							<hr />
+
+							<p className='content is-medium'>
+								Dordoni Doors is a full service door installation company with over
+								30 years of experience in the field. We are equipped with the necessary tools and knowledge
+								and we aim to provide the highest level of quality to all our clients.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -21,31 +37,14 @@ const AboutUs = () => {
 	);
 };
 
-/*
-<div className='column'>
-  <div className='image-circular bg bg-image2'></div>
+// prop types
+AboutUs.propTypes = {
+	refProp: PropTypes.object
+};
 
-  <h2 className='title is-3'>What We Do</h2>
-
-  <div className='about-text center'>
-    Installation of commercial and residential doors, frames, windows & finish hardware.
-    We pride ourselves on finishing our jobs correctly and in a timely manor.
-    We go above and beyond to make sure our customers are fully satisfied during the whole project.
-  </div>
-</div>
-<div className='column'>
-  <div className='image-circular bg bg-image3'></div>
-
-
-  <h2>Why Choose Us?</h2>
-
-  <div className='about-text center'>
-    We work with architects and general contractors to produce beautiful, functional structures.
-    Contact us today so we can bring our project management skills and extensive construction experience
-    to your next project.
-  </div>
-</div>
-
-*/
+// default props
+AboutUs.defaultProps = {
+	refProp: null
+};
 
 export default AboutUs;

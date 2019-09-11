@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
+// styles
 import './Services.scss';
 
 const Services = (props) => {
   return (
-		<section className='section is-medium'>
+		<section className='section is-medium' ref={props.refProp}>
       <div className='container'>
         <h1 className='title is-2'>Services</h1>
         <p className='content is-medium'>
@@ -73,6 +74,16 @@ const Services = (props) => {
       </div>
     </section>
   );
+};
+
+// prop types
+Services.propTypes = {
+  refProp: PropTypes.object
+};
+
+// default props
+Services.defaultProps = {
+  refProp: null
 };
 
 export default Services;
