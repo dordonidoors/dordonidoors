@@ -7,7 +7,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Gallery.scss';
 
 const Gallery = (props) => {
-  window.scrollTo(0,0);
   return (
     <section id='gallery' ref={props.refProp} className='section is-medium'>
       <h1 className='title is-2'>Gallery</h1>
@@ -51,6 +50,15 @@ const Gallery = (props) => {
       </div>
     </section>
   );
+};
+
+// prop types
+Gallery.propTypes = {
+  refProp: PropTypes.object
+};
+
+Gallery.defaultProps = {
+  refProp: null
 };
 
 export default Gallery;

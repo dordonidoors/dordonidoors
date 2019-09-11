@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
-import Recaptcha from 'react-recaptcha';
+import Recaptcha from 'react-google-recaptcha';
 
 // validation
 import validateContactUsForm from '../../validation';
@@ -46,7 +46,7 @@ class ContactUs extends React.Component {
 			.then(res => res.json())
 			.then((res) => {
 				this.setState({isPerson: res.success});
-			});
+			})
 	}
 	render () {
 		let phone = process.env.REACT_APP_PHONE;
@@ -62,7 +62,7 @@ class ContactUs extends React.Component {
 
 							<p className='content is-medium'>
 								Please take a moment to fill in the form to receive custom pricing.
-								We will get back to you within 24 hours of receiving your message. Thank you.
+								We will contact you within 24 hours of receiving your message. Thank you.
 							</p>
 
 							<p className='content is-medium'>
@@ -100,7 +100,7 @@ class ContactUs extends React.Component {
 
 								<div className='field'>
 									<Recaptcha
-										verifyCallback={this.recaptchaOnVerifyCallback.bind(this)}
+										onChange={this.recaptchaOnVerifyCallback.bind(this)}
 										sitekey='6LecI7cUAAAAAETsMy5AWV-gQi8PLuACLmIvCYsq'/>
 								</div>
 

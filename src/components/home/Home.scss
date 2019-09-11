@@ -1,47 +1,6 @@
-// .fixed-image {
-// 	min-height: 100%;
-// 	background-attachment: fixed;
-// 	background-position: center;
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// }
-// .static-section {
-// 	background: #343a40;
-// }
-// .static-section-white {
-// 	background: white;
-// 	color: black !important;
-// }
-// .title {
-// 	font-size: 70px;
-// }
-// .subtitle {
-// 	font-size: 40px;
-// }
-// .title, .subtitle {
-// 	text-shadow: 1px 1px 5px black;
-// }
-// .responsive {
-// 	width: 100%;
-// 	display: block
-// }
-// .about-text {
-// 	color: white;
-// 	font-size: 20px;
-// 	padding: 20px;
-// }
-// .center {
-// 	margin: 0 auto;
-// }
-//
-
 hr {
 	height: 1px !important;
 	border: none !important;
-	// color: #333 !important;
-	// width: 340px;
-	// margin: 0 auto;
-	background-color: #333 !important;
 }
 
 // /* Background images */
@@ -55,24 +14,3 @@ hr {
 	background-color: rgba(255, 255, 255, 0.4);
 	background-blend-mode: lighten;
 }
-//
-// .bg-image2 {
-// 	background-image: url("/images/door9.webp");
-// }
-//
-// .bg-image3 {
-// 	background-image: url('/images/door10.webp');
-// }
-//
-// .bg-image4 {
-// 	background-image: url('/images/door6.jpg');
-// }
-//
-// /* About Images */
-// .image-circular {
-// 	border-radius: 50%;
-// 	height: 300px;
-// 	margin: 0 auto;
-// 	width: 300px;
-// 	margin-bottom: 20px;
-// }

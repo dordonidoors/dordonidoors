@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-// css
+// styles
 import './Navbar.scss';
 
 // components
@@ -58,9 +58,18 @@ const Navbar = (props) => {
 	);
 };
 
+Navbar.propTypes = {
+	aboutRef: PropTypes.object,
+	servicesRef: PropTypes.object,
+	aboutgalleryRefRef: PropTypes.object,
+	contactRef: PropTypes.object,
+};
+
+Navbar.defaultProps = {
+	aboutRef: null,
+	servicesRef: null,
+	aboutgalleryRefRef: null,
+	contactRef: null,
+};
+
 export default Navbar;
-
-/*
-
-
-*/

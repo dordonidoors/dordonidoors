@@ -26,8 +26,8 @@ const AboutUs = (props) => {
 
 							<p className='content is-medium'>
 								Dordoni Doors is a full service door installation company with over
-								30 years of experience in the field equipped with the necessary tools and knowledge
-								that aims to provide the highest level of quality to all our clients.
+								30 years of experience in the field. We are equipped with the necessary tools and knowledge
+								and we aim to provide the highest level of quality to all our clients.
 							</p>
 						</div>
 					</div>
