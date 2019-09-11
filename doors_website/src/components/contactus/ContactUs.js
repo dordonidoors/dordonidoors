@@ -13,7 +13,9 @@ class ContactUs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleSubmit.bind(this);
-		this.recaptchInstance = null;
+		this.state = {
+			isPerson: false
+		}
 	}
 	componentDidMount() {
 		window.scrollTo(0,0);
@@ -43,7 +45,13 @@ class ContactUs extends React.Component {
 
 	}
 	recaptchaOnVerifyCallback(response) {
-		console.log(response)
+		console.log(response);
+		console.log('invoked');
+		fetch(`https://us-central1-dordonidoors-e0b15.cloudfunctions.net/validateRecaptcha?token=${response}`)
+			.then(res => res.json())
+			.then(({res}) => {
+				this.setState({isPerson: res.success});
+			})
 	}
 	render () {
 		return (
@@ -94,15 +102,17 @@ class ContactUs extends React.Component {
 
 								<div className='field'>
 									<Recaptcha
-										verifyCallback={this.recaptchaOnVerifyCallback}
+										verifyCallback={this.recaptchaOnVerifyCallback.bind(this)}
 										sitekey='6LecI7cUAAAAAETsMy5AWV-gQi8PLuACLmIvCYsq'/>
 								</div>
 
 								<div className='field'>
 									<p className='control'>
-										<button type='submit' className='button is-success'>
-											Send
-										</button>
+										{this.state.isPerson && (
+											<button type='submit' className='button is-success'>
+												Send
+											</button>
+										)}
 									</p>
 								</div>
 							</form>
