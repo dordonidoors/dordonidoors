@@ -5,8 +5,18 @@
 $table-breakpoint: 1023px;
 
 #about-container {
+  display: inline-flex;
+
   @media screen and (min-width: $table-breakpoint){
     margin-left: 25%;
     margin-right: 25%;
   }
+}
+
+div.column.is-one-third {
+  display: flex;
+  justify-content: center;
+}
+div.box {
+  width: 240px;
 }

@@ -1,24 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import Recaptcha from 'react-recaptcha';
 
 // validation
 import validateContactUsForm from '../../validation';
 
+// styles
 import 'react-toastify/dist/ReactToastify.css';
 import './ContactUs.scss';
 
 class ContactUs extends React.Component {
 	constructor(props) {
 		super(props);
-		this.handleSubmit.bind(this);
 		this.state = {
 			isPerson: false
-		}
-	}
-	componentDidMount() {
-		window.scrollTo(0,0);
+		};
 	}
 	handleSubmit(event) {
 		event.preventDefault();
@@ -31,13 +28,13 @@ class ContactUs extends React.Component {
 
 			fetch(`https://us-central1-dordonidoors-e0b15.cloudfunctions.net/sendMail?name=${name}&email=${email}&message=${message}`)
 				.then(res => res.json())
-				.then(
-					(result) => {
-						console.log(result);
+				.then((result) => {
+					if (result.message === 'success') {
+						toast('Message sent', {type: toast.TYPE.SUCCESS});
+					} else {
+						toast('Message could not be sent. Please try again later', {type: toast.TYPE.ERROR});
 					}
-				)
-
-			toast('Message sent', {type: toast.TYPE.SUCCESS});
+				});
 		}
 		else {
 			toast('Invalid input', {type: toast.TYPE.ERROR});
@@ -45,15 +42,16 @@ class ContactUs extends React.Component {
 
 	}
 	recaptchaOnVerifyCallback(response) {
-		console.log(response);
-		console.log('invoked');
 		fetch(`https://us-central1-dordonidoors-e0b15.cloudfunctions.net/validateRecaptcha?token=${response}`)
 			.then(res => res.json())
-			.then(({res}) => {
+			.then((res) => {
 				this.setState({isPerson: res.success});
-			})
+			});
 	}
 	render () {
+		let phone = process.env.REACT_APP_PHONE;
+		// remove special characters
+		phone = phone.replace('(', '').replace(')', '').replace('-', '').replace(' ', '');
 		return (
 			<section id='contact-us' ref={this.props.refProp} className='section is-medium' style={{textAlign: 'left'}}>
 				<ToastContainer style={{color: 'white', textShadow: '!important'}} position={toast.POSITION.BOTTOM_RIGHT}/>
@@ -72,7 +70,7 @@ class ContactUs extends React.Component {
 							</p>
 							<ul>
 								<li>
-									<span><a className='button is-white' href={`tel:${process.env.REACT_APP_PHONE}`}><i className='fas fa-phone'></i><strong>&nbsp;{process.env.REACT_APP_PHONE}</strong></a></span>
+									<span><a className='button is-white' href={`tel:${phone.replace('(','')}`}><i className='fas fa-phone'></i><strong>&nbsp;{process.env.REACT_APP_PHONE}</strong></a></span>
 								</li>
 								<li>
 									<span><a className='button is-white' href='mailto:dordonidoors@gmail.com'><i className='fas fa-envelope'></i><strong>&nbsp;dordonidoors@gmail.com</strong></a></span>
@@ -123,5 +121,15 @@ class ContactUs extends React.Component {
 		);
 	}
 }
+
+// prop types
+ContactUs.propTypes = {
+	refProp: PropTypes.object
+};
+
+// default props
+ContactUs.defaultProps = {
+	refProp: null
+};
 
 export default ContactUs;
