@@ -7,7 +7,7 @@ import {scrollToRef} from '../scrollToRef/scrollToRef';
 const Home = (props) => {
 	return (
 		<section id='home' ref={props.refProp} className='section is-large bg bg-image1' style={{
-				backgroundImage: `url('${process.env.REACT_APP_IMAGES_PREFIX}/office2.jpg')`
+				backgroundImage: `url('${process.env.REACT_APP_IMAGES_PREFIX}/office2cropped.jpg')`
 			}}>
 			<div className='container'>
 				<h1 className='title is-1'>Dordoni Doors & Hardware Installation</h1>

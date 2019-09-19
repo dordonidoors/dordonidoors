@@ -9,13 +9,11 @@ const AboutUs = (props) => {
 		<section id='about-us' ref={props.refProp} className='section is-medium has-text-left'>
 			<div id='about-container' className='container'>
 				<div className='columns'>
-					<div className='column is-one-third'>
-						<div className='box'>
-							<figure className='image' style={{width: '200px'}}>
-								<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/doorspresident.jpg`} />
-							</figure>
+					<div className='column is-one-third' style={{alignItems: 'center'}}>
+						<figure className='image' style={{width: '200px'}}>
+							<img src={`${process.env.REACT_APP_IMAGES_PREFIX}/doorspresident.jpg`}/>
 							<p>Dordoni Doors President</p>
-						</div>
+						</figure>
 					</div>
 					<div className='column'>
 						<div>
