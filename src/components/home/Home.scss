@@ -1,6 +1,7 @@
 hr {
 	height: 1px !important;
 	border: none !important;
+	background-color: black;
 }
 
 // /* Background images */
@@ -11,6 +12,10 @@ hr {
 }
 //
 .bg-image1 {
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.5);
 	background-blend-mode: lighten;
+}
+
+section#home div.container h4.subtitle.is-6 {
+	font-weight: bold;
 }
