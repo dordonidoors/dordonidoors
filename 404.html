@@ -5,7 +5,7 @@
     <title>Dordoni Doors</title>
     <script type='text/javascript'>
       var l = window.location;
-      if (l.pathname > 1 || l.pathname !== '/') {
+      if (l.pathname.length > 1 || l.pathname !== '/') {
         l.replace(`${l.protocol}//${l.hostname}`);
       }
     </script>
