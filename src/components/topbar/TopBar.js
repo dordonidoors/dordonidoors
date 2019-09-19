@@ -13,6 +13,11 @@ const TopBar = () => {
           <span><a href='mailto:dordonidoors@gmail.com'><i className='fas fa-envelope'></i><strong>&nbsp;dordonidoors@gmail.com</strong></a></span>
         </p>
       </div>
+      <div className='level-right'>
+        <p className='content is-small'>
+          <span><strong>CSLB LICENCE #1048585</strong></span>
+        </p>
+      </div>
     </nav>
   );
 };

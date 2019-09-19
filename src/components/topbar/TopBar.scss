@@ -9,6 +9,10 @@
   background-color: $cyan;
 }
 
-p.content > span > a {
-  color: black;
+p.content {
+  span {
+    strong, a {
+      color: black;
+    }
+  }
 }
